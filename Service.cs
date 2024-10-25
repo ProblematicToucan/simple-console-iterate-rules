@@ -4,7 +4,7 @@ namespace formulatrix_submission_01
 {
     class Service
     {
-        private static readonly Dictionary<int, string> rules = new(){
+        private static readonly Dictionary<int, string> _rules = new(){
             {3, "foo"},
             {4, "baz"},
             {5, "bar"},
@@ -20,7 +20,7 @@ namespace formulatrix_submission_01
                 var output = new StringBuilder();
 
                 // Check divisibility against the keys in the dictionary
-                foreach (var rule in rules)
+                foreach (var rule in _rules)
                 {
                     if (i % rule.Key == 0)
                     {
