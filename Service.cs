@@ -12,13 +12,13 @@ namespace formulatrix_submission_01
                 bool divisibleBy3 = i % 3 == 0;
                 bool divisibleBy5 = i % 5 == 0;
 
-                if (divisibleBy3 && divisibleBy5)
-                    result.Append("foobar");
-                else if (divisibleBy3)
+                if (divisibleBy3)
                     result.Append("foo");
-                else if (divisibleBy5)
+
+                if (divisibleBy5)
                     result.Append("bar");
-                else
+
+                if (!divisibleBy3 && !divisibleBy5)
                     result.Append(i);
 
                 if (i < x) result.Append(", ");
