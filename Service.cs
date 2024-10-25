@@ -41,5 +41,17 @@ namespace formulatrix_submission_01
 
             Console.WriteLine(result.ToString());
         }
+
+        public static void AddRule(int input, string output)
+        {
+            rules.Add(input, output);
+            Console.WriteLine("Rule entry was added.");
+        }
+
+        public static void RemoveRule(int input)
+        {
+            if (!rules.ContainsKey(input)) Console.WriteLine("Rule entry was removed.");
+            rules.Remove(input);
+        }
     }
 }
