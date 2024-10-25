@@ -13,17 +13,14 @@ namespace formulatrix_submission_01
                 bool divisibleBy5 = i % 5 == 0;
                 bool divisibleBy7 = i % 7 == 0;
 
-                if (divisibleBy3 && divisibleBy5)
-                    result.Append("foobar");
-                else if (divisibleBy3)
+                if (divisibleBy3)
                     result.Append("foo");
-                else if (divisibleBy5)
+                if (divisibleBy5)
                     result.Append("bar");
-                else
-                    result.Append(i);
-
                 if (divisibleBy7)
                     result.Append("jazz");
+                if (!divisibleBy3 && !divisibleBy5 && !divisibleBy7)
+                    result.Append(i);
 
                 if (i < x) result.Append(", ");
             }
