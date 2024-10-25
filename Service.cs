@@ -11,6 +11,7 @@ namespace formulatrix_submission_01
             {
                 bool divisibleBy3 = i % 3 == 0;
                 bool divisibleBy5 = i % 5 == 0;
+                bool divisibleBy7 = i % 7 == 0;
 
                 if (divisibleBy3 && divisibleBy5)
                     result.Append("foobar");
@@ -20,6 +21,9 @@ namespace formulatrix_submission_01
                     result.Append("bar");
                 else
                     result.Append(i);
+
+                if (divisibleBy7)
+                    result.Append("jazz");
 
                 if (i < x) result.Append(", ");
             }
