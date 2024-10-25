@@ -4,26 +4,37 @@ namespace formulatrix_submission_01
 {
     class Service
     {
+        private static readonly Dictionary<int, string> rules = new(){
+            {3, "foo"},
+            {4, "baz"},
+            {5, "bar"},
+            {7, "jazz"},
+            {9, "huzz"},
+        };
+
         public static void Calculate(int x)
         {
             var result = new StringBuilder();
             for (int i = 1; i <= x; i++)
             {
-                bool divisibleBy3 = i % 3 == 0;
-                bool divisibleBy5 = i % 5 == 0;
-                bool divisibleBy7 = i % 7 == 0;
+                var output = new StringBuilder();
 
-                if (divisibleBy3 && divisibleBy5)
-                    result.Append("foobar");
-                else if (divisibleBy3)
-                    result.Append("foo");
-                else if (divisibleBy5)
-                    result.Append("bar");
-                else
-                    result.Append(i);
+                // Check divisibility against the keys in the dictionary
+                foreach (var rule in rules)
+                {
+                    if (i % rule.Key == 0)
+                    {
+                        output.Append(rule.Value);
+                    }
+                }
 
-                if (divisibleBy7)
-                    result.Append("jazz");
+                // If output is empty, append the number itself
+                if (output.Length == 0)
+                {
+                    output.Append(i);
+                }
+
+                result.Append(output);
 
                 if (i < x) result.Append(", ");
             }
