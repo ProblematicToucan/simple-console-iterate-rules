@@ -4,7 +4,6 @@ This repository contains answers to multiple questions related to a simple conso
 
 ### Branches
 
-- **Main**: Contains the general structure of the foobar program.
 - **01**: This branch provides the solution to **Question 1**.
 - **02, 03, ...**: Each branch from here on represents answers to different questions. For example, `02` answers Question 2, `03` answers Question 3, and so on.
 
