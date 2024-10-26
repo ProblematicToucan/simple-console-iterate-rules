@@ -4,8 +4,8 @@ This repository contains answers to multiple questions related to a simple conso
 
 ### Branches
 
-- **03**: This branch provides the solution to **Question 1**.
-- **01, 02, ...**: Each branch from here on represents answers to different questions. For example, `03` answers Question 3, `01` answers Question 1, and so on.
+- **03**: This branch provides the solution to **Question 3**.
+- **01, 02, ...**: Each branch from here on represents answers to different questions. For example, `01` answers Question 1, `02` answers Question 2, and so on.
 
 ### Usage
 
